@@ -76,18 +76,17 @@
 - This could get a bonus, but how to do it?
 
 # How do we make the project, and who does what?
-- Bresenham's Line Algorithm can be used to draw connections
+- 
 ## Splitting It Up:
 - Person 1: Game logic and validation
   - Length check, letters-on-board check, no same-side neighbors, connecting-letter check
   - Used-letters tracking and the win condition
   - Word count and par logic
   - Failure cases (too short, too long, not valid)
-- Person 2: Dictionary and puzzle generator
+- Riggs: Dictionary and puzzle generator
   - Loading the Scrabble word list from a file
   - Dictionary lookup (string comparison and search)
   - Generating a board from two words (the 8-13 letter words, 12 distinct letters, side rules)
-  - This is the riskiest piece, so give it to someone who wants a challenge, and start it early.
 - Person 3: Graphics
   - Drawing the board, letters, circles, and the bar
   - Bresenham’s line algorithm for connections (dashed and solid)
@@ -98,4 +97,3 @@
   - The main loop that calls everyone else’s procedures
   - The 3-second failure box timing (syscall 32 for sleep)
   - Audio as a bonus, plus the README and final testing
-  - This person is the glue, so they’ll need to talk to everyone.
