@@ -2,38 +2,38 @@
 ## Authors: Connor Burley, Eadan Lachover, Riggs McLeod, Elise Morhack
 
 # What is Letter Boxed?
-  The board is a square with 12 letters, 3 on each side
-  You build words from those letters, and each word must be at least 3 letters and at most 15 letters
-  You can't use consecutive letters or letters from the same side of the box
-  The 12 letters have to be 12 distinct letters made from two words that, together, could solve the Letter Boxed
-  The last letter of the word we just entered is the first letter of the next word we enter; we'll call this our connecting letter
-  There is a bar upon which the letters are built, and above the bar and letters, we will have "ENTER A WORD"
-  There are dashed lines between letters in the word we're building
-  There are full lines between letters in words we've made
-  If the word the user made does not exist, we will flash a box for three seconds that gives the failure case
+- The board is a square with 12 letters, 3 on each side
+- You build words from those letters, and each word must be at least 3 letters and at most 15 letters
+- You can't use consecutive letters or letters from the same side of the box
+- The 12 letters have to be 12 distinct letters made from two words that, together, could solve the Letter Boxed
+- The last letter of the word we just entered is the first letter of the next word we enter; we'll call this our connecting letter
+- There is a bar upon which the letters are built, and above the bar and letters, we will have "ENTER A WORD"
+- There are dashed lines between letters in the word we're building
+- There are full lines between letters in words we've made
+- If the word the user made does not exist, we will flash a box for three seconds that gives the failure case
 
 # How Would We Implement It?
-  4 char arrays of size 3; no overlap between arrays and no repeating letters
-  Each letter should be given a weight so we can find par
-  We need to import a dictionary of all the standard Scrabble words.
-  From this dictionary, we should find two words in which the Letter Boxed could be won
-    We could use a random operator for this-- all words with length 8-13
-    They can have letters that repeat both in them and between them
-    Their letters must meet the standard rules of Letter Boxed of being able to make a string to a different side
-    These words would be the most important part of the game, since we would need to find them to make a correct Letter Boxed game
-  The program has to keep track of which letters sit on which side, which letters have been used so far, the words we've entered so far, the last connecting letter (last letter of the most recent word), and the word count
-  On each turn, the board is shown, we read a word or letter from the player, we check the length, letters on the board, that there are no same-side neighbors, that it starts with the previous word's last letter, and is in the dictionary
-  Failure Cases:
-    Too short: *word* "IS TOO SHORT"
-    Too long: *word* "IS TOO LONG"
-    Invalid word: *word* "IS NOT VALID"
-  If the word passes, update the state and indicate the connecting letter of this word would not make the box full
-  We would need to have a win condition, and if we did not win yet, repeat
-  The hard parts in MIPS:
-    Representing the board and mapping letters to sides
-    Tracking used letters: there are only 12, so we could use some register to check if we've won yet 
-    Using the input: which syscall reads a string, and what do we know about the trailing newline?
-    Procedures: which checks become their own procedures; what go in $a registers vs $v registers
+- 4 char arrays of size 3; no overlap between arrays and no repeating letters
+- Each letter should be given a weight so we can find par
+- We need to import a dictionary of all the standard Scrabble words.
+- From this dictionary, we should find two words in which the Letter Boxed could be won
+* We could use a random operator for this-- all words with length 8-13
+* They can have letters that repeat both in them and between them
+* Their letters must meet the standard rules of Letter Boxed of being able to make a string to a different side
+* These words would be the most important part of the game, since we would need to find them to make a correct Letter Boxed game
+- The program has to keep track of which letters sit on which side, which letters have been used so far, the words we've entered so far, the last connecting letter (last letter of the most recent word), and the word count
+- On each turn, the board is shown, we read a word or letter from the player, we check the length, letters on the board, that there are no same-side neighbors, that it starts with the previous word's last letter, and is in the dictionary
+- Failure Cases:
+* Too short: *word* "IS TOO SHORT"
+* Too long: *word* "IS TOO LONG"
+* Invalid word: *word* "IS NOT VALID"
+- If the word passes, update the state and indicate the connecting letter of this word would not make the box full
+- We would need to have a win condition, and if we did not win yet, repeat
+- The hard parts in MIPS:
+* Representing the board and mapping letters to sides
+* Tracking used letters: there are only 12, so we could use some register to check if we've won yet 
+* Using the input: which syscall reads a string, and what do we know about the trailing newline?
+* Procedures: which checks become their own procedures; what go in $a registers vs $v registers
 
 # Different Colors:
   Background color: #007fff (azure)
