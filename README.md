@@ -1,5 +1,5 @@
-## Letter Boxed Project
-# Authors: Connor Burley, Eadan Lachover, Riggs McLeod, Elise Morhack
+# Letter Boxed Project
+## Authors: Connor Burley, Eadan Lachover, Riggs McLeod, Elise Morhack
 
 # What is Letter Boxed?
   The board is a square with 12 letters, 3 on each side
