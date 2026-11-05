@@ -71,5 +71,7 @@
 - We could make a sound for finishing the game and deleting connections
 - Happy Wheels victory sound for a full box
 - Pluck sound effect for deleting or restarting
-    
+
+# Emulating on PlayStation?
+- This could get a bonus, but how to do it?
 
