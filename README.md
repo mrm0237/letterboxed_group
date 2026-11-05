@@ -78,21 +78,21 @@
 # How do we make the project, and who does what?
 - 
 ## Splitting It Up:
-- Person 1: Game logic and validation
+- Elise Morhack: Game logic and validation
   - Length check, letters-on-board check, no same-side neighbors, connecting-letter check
   - Used-letters tracking and the win condition
   - Word count and par logic
   - Failure cases (too short, too long, not valid)
-- Riggs: Dictionary and puzzle generator
+- Riggs McLeod: Dictionary and puzzle generator
   - Loading the Scrabble word list from a file
   - Dictionary lookup (string comparison and search)
   - Generating a board from two words (the 8-13 letter words, 12 distinct letters, side rules)
-- Person 3: Graphics
+- Connor Burley: Graphics
   - Drawing the board, letters, circles, and the bar
   - Bresenham’s line algorithm for connections (dashed and solid)
   - Colors, the command list display, the failure box, and the star
   - This person owns the imageBuffer layout and the display settings.
-- Person 4: Input, main loop, and integration
+- Eadan Lachover: Input, main loop, and integration
   - Reading input and handling the commands (RR, XX, EE, W/A/S/D and J/K/L)
   - The main loop that calls everyone else’s procedures
   - The 3-second failure box timing (syscall 32 for sleep)
