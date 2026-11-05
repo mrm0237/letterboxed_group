@@ -1,7 +1,7 @@
 # Letter Boxed Project
 ### Authors: Connor Burley, Eadan Lachover, Riggs McLeod, Elise Morhack
 
-## What is Letter Boxed?
+## What is [Letter Boxed](https://www.nytimes.com/puzzles/letter-boxed)?
 - The board is a square with 12 letters, 3 on each side
 - You build words from those letters, and each word must be at least 3 letters and at most 15 letters
 - You can't use consecutive letters or letters from the same side of the box
