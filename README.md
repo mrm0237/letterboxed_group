@@ -76,4 +76,4 @@
 - This could get a bonus, but how to do it?
 
 # How do we make the project?
-- Bresham's Line Algorithm can be used to draw connections
+- Bresenham's Line Algorithm can be used to draw connections
