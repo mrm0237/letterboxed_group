@@ -1,7 +1,7 @@
-# letterboxed_group
-Authors: Connor Burley, Eadan Lachover, Riggs McLeod, Elise Morhack
+## Letter Boxed Project
+# Authors: Connor Burley, Eadan Lachover, Riggs McLeod, Elise Morhack
 
-What is Letter Boxed?
+# What is Letter Boxed?
   The board is a square with 12 letters, 3 on each side
   You build words from those letters, and each word must be at least 3 letters and at most 15 letters
   You can't use consecutive letters or letters from the same side of the box
@@ -12,7 +12,7 @@ What is Letter Boxed?
   There are full lines between letters in words we've made
   If the word the user made does not exist, we will flash a box for three seconds that gives the failure case
 
-How Would We Implement It?
+# How Would We Implement It?
   4 char arrays of size 3; no overlap between arrays and no repeating letters
   Each letter should be given a weight so we can find par
   We need to import a dictionary of all the standard Scrabble words.
@@ -35,7 +35,7 @@ How Would We Implement It?
     Using the input: which syscall reads a string, and what do we know about the trailing newline?
     Procedures: which checks become their own procedures; what go in $a registers vs $v registers
 
-Different Colors:
+# Different Colors:
   Background color: #007fff (azure)
   Lines Inside Box and Circles Around Letters with Strings: #0075ec (electric blue)
   Letter, Outside of Box, Circles Around Letters without Strings: #3C4142 (charcoal grey)
@@ -47,7 +47,7 @@ Different Colors:
   Used letters or letter with line going to it: #000000 (white)
   Failure box: letters in #FFFFFF and background in #000000
 
-Command List (Needed since you can't touch anything on Bitmap Display):
+# Command List (Needed since you can't touch anything on Bitmap Display):
   Restart = “RR”
   Delete = “XX”
   Enter = “EE”
