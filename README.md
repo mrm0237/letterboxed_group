@@ -47,7 +47,7 @@
 - Used letters or letter with line going to it: #000000 (white)
 - Failure box: letters in #FFFFFF and background in #000000
 
-## Command List (Needed since you can't touch anything on Bitmap Display):
+## Command List for MMIO Keyboard (Needed since you can't touch anything on Bitmap Display):
 - Restart = “RR”
 - Delete = “XX”
 - Enter = “EE”
