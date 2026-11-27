@@ -30,11 +30,6 @@ wordCount: .word 0
 .globl updateWordCount
 .globl checkPar
 
-
-
-
-
-
 checkLength:
     #start counting @ 0
     li $t0, 0
@@ -100,11 +95,6 @@ tooLong:
      
 
 #letters on board?
-.globl checkBoardLetters
-
-
-
-
 checkBoardLetters:
     #@first letter
     li $t0, 0
@@ -172,14 +162,8 @@ boardInvalid:
     #letter not on board
     li $v0, 3
     jr $ra
-
-
-    
-    
     
 #check letters are not on same side
-.globl checkSides
-
 checkSides:
     #start first letter
     li $t0, 0
@@ -269,10 +253,6 @@ sidesInvalid:
     
     
 #check connecting letter
-.globl checkConnection
-
-
-
 checkConnection:
     #a0 = new word
     #a1 = connecting letter [0 for first word]
@@ -304,14 +284,7 @@ connectionValid:
     li $v0, 0
     jr $ra
     
-    
-    
-    
-    
-    
 #track letters used
-.globl updateUsedLetters
-
 updateUsedLetters:
     #start at first letter
     li $t0, 0
@@ -386,12 +359,7 @@ usedInvalid:
     li $v0, 3
     jr $ra
 
-    
-    
-    
 #check if all letters have been used
-.globl checkWin
-
 checkWin:
     #get used letters
     lw $t0, usedLetters
@@ -418,11 +386,6 @@ gameWon:
     
     
 #count valid words
-.globl updateWordCount
-
-
-
-
 updateWordCount:
     #get current word count
     lw $t0, wordCount
@@ -451,8 +414,6 @@ updateWordCount:
 
 
 #check number of words for star
-.globl checkPar
-
 checkPar:
     #get word count
     lw $t0, wordCount
@@ -513,4 +474,3 @@ star12:
     
     
    
-
